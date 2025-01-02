@@ -1,0 +1,93 @@
+# Get all data
+GET http://localhost:5000/api/users
+
+###
+
+# Get data by ID
+GET http://localhost:5000/api/users/1
+
+###
+POST http://localhost:5000/api/products
+Content-Type: application/json
+
+{
+    "name": "Product A",
+    "description": "This is a description for Product A",
+    "price": 29.99
+}
+
+
+###
+POST http://localhost:5000/api/discounts
+Content-Type: application/json
+{
+  "customer_id": 9,  // Replace with an actual customer ID from your database
+  "product_id": 9,   // Replace with an actual product ID from your database
+  "discount_price": 10.00
+}
+
+
+
+###
+
+# Update data
+PUT http://localhost:5000/users/1
+Content-Type: application/json
+
+{
+    "name": "Ferdy Updated",
+    "email": "ferdy.updated@gmail.com",
+    "gender": "Male"
+}
+
+###
+
+# Delete data
+DELETE http://localhost:5000/customers/:49
+
+###
+
+# Register a new user
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+    "username": "johndoe",
+    "password": "password123"
+}
+
+###
+
+# Login user
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+    "username": "johndoe",
+    "password": "password123"
+}
+
+
+###
+
+# Access protected user details
+GET http://localhost:5000/api/auth/user
+Authorization: Bearer <your-access-token>
+
+###
+
+
+###
+
+# CUSTOMER
+# CUSTOMER
+# CUSTOMER
+
+# CUSTOMER add
+POST http://localhost:5000/api/customers
+Content-Type: application/json
+
+{
+    "nama_customer": "johndoe",
+    "phone_number": "0812343244"
+}
